@@ -16,7 +16,7 @@ export interface ChatMessage {
 export async function chatJSON<T>(
   messages: ChatMessage[],
   schema?: { type: string; properties: Record<string, unknown> },
-  model: string = "openrouter/auto"
+  model: string = "google/gemma-4-26b-a4b-it:free"
 ): Promise<T> {
   const payload: Record<string, unknown> = {
     model,
