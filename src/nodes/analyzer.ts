@@ -29,7 +29,7 @@ export async function analyzerNode(
   // Step 1 — scan the filesystem
   const projectRoot = process.env.PROJECT_ROOT ?? process.cwd();
   const allFiles = listProjectFiles(projectRoot);
-  console.log(`  → Found ${allFiles.length} files in ${projectRoot}`);
+  console.log(`  -> Found ${allFiles.length} files in ${projectRoot}`);
 
   const treeText = buildDirectoryTree(allFiles);
 

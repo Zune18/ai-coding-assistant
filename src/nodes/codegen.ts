@@ -99,7 +99,7 @@ ${reviewBlock}`,
     language: f.language,
   }));
 
-  console.log(`  → Generated ${generatedCode.length} file(s):`);
+  console.log(`  -> Generated ${generatedCode.length} file(s):`);
   generatedCode.forEach((f) => console.log(` ${f.filename}`));
 
   return {

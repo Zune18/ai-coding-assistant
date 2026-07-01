@@ -16,7 +16,7 @@ export interface ChatMessage {
 export async function chatJSON<T>(
   messages: ChatMessage[],
   schema?: { type: string; properties: Record<string, unknown> },
-  model: string = "google/gemma-4-26b-a4b-it:free"
+  model: string = "google/gemini-2.5-flash-lite-preview-09-2025"
 ): Promise<T> {
   const payload: Record<string, unknown> = {
     model,
@@ -43,7 +43,7 @@ export async function chatJSON<T>(
     });
 
     const content = response.data.choices[0].message.content;
-
+    
     if (schema) {
       return JSON.parse(content) as T;
     }

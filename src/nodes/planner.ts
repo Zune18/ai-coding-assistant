@@ -10,7 +10,7 @@ interface PlannerResponse {
 export async function plannerNode(
   state: AgentStateType
 ): Promise<Partial<AgentStateType>> {
-  console.log("\n📋 [planner_node] Creating implementation plan...");
+  console.log("\n[planner_node] Creating implementation plan...");
 
   const schema = {
     type: "object",
@@ -60,7 +60,7 @@ Rules:
     status: "pending" as const,
   }));
 
-  console.log(`  → Generated ${plan.length} steps`);
+  console.log(`  -> Generated ${plan.length} steps`);
   plan.forEach((s) => console.log(`     ${s.id}. ${s.description}`));
 
   return {
